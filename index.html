@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container start">
+	<img src="door.png" class="w-25 door1">
+	<img src="door2.png" class="w-25">
+	<img src="door3.png" class="w-25">
+</div>
+<div class="HP" style="background-image: url(bg.jpg); height: 1000px; background-size: 100% 100%; display: none;" >
+	<h1 style="font-size: 50px; color: white;">Помоги Гарри найти его метлу,плащ и палочку!!!Надо заработать 3 очка!!!<h1>
+	<h1 style="font-size: 50px; color: white;" class="score_block">
+		0
+	</h1>
+	<button class=" btn btn-success btn_HP">Выйт из игры</button>
+	<img src="mantiya.png" style="width: 100px; position: absolute; margin-left: 410px; margin-top: 580px;" class="w-25 mantiya">
+	<img src="metla.png" style="width: 100px; position: absolute; margin-left: 750px; margin-top: 600px;" class="w-25 metla">
+	<img src="palochka.png" style="width: 100px; position: absolute; margin-left: 90px; margin-top: 550px;" class="w-25 palochka">
+	<img src="gun.png" style="width: 100px; position: absolute; margin-top: 400px;" class="w-25 gun">
+	<img src="ring.png" style="width: 100px; position: absolute; margin-left: 650px; margin-top: 500px;" class="w-25 ring">
+
+
+</div>
+
+
+<script type="text/javascript">
+	let score = document.querySelector(".score_block");
+	score = 0
+	document.querySelector(".door1").onclick = function(){
+		alert("Вы попали в Хогвартс");
+		document.querySelector(".start").style.display = "none";
+		document.querySelector(".HP").style.display = "block";
+	}
+
+	document.querySelector(".mantiya").onclick = function(){
+		document.querySelector(".mantiya").style.display = "none";
+		score = score + 1;
+		document.querySelector(".score_block").innerHTML = score;
+	}
+
+	document.querySelector(".metla").onclick = function(){
+		document.querySelector(".metla").style.display = "none";
+		score = score + 1;
+		document.querySelector(".score_block").innerHTML = score;
+	}
+
+	document.querySelector(".palochka").onclick = function(){
+		document.querySelector(".palochka").style.display = "none";
+		score = score + 1;
+		document.querySelector(".score_block").innerHTML = score;
+	}
+
+	document.querySelector(".gun").onclick = function(){
+		document.querySelector(".gun").style.display = "none";
+		alert("no")
+	}
+
+	document.querySelector(".ring").onclick = function(){
+		document.querySelector(".ring").style.display = "none";
+		alert("no")
+	}
+
+	document.querySelector(".btn_HP").onclick = function(){
+		document.querySelector(".start").style.display = "block";
+		document.querySelector(".HP").style.display = "none";
+	}
+
+</script>
+</body>
+</html>
